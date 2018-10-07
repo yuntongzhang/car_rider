@@ -1,6 +1,6 @@
 # Car Rider
 
-_CS2102 (Database Systems) Project
+_CS2102 (Database Systems) Project_
 
 ## Set up
 
