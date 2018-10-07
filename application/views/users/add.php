@@ -11,7 +11,7 @@
 
 <body>
     <div class="login-dark">
-        <?php echo form_open('User_controller/register_user');?>
+        <?php echo form_open('users/register_user');?>
             <h2 class="sr-only">Login Form</h2>
             <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Email"></div>
             <div class="form-group"><input class="form-control" name="first_name" placeholder="First name"></div>
