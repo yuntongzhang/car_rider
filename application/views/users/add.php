@@ -1,43 +1,31 @@
 <!DOCTYPE html>
-<html lang = "en">
+<html>
 
-   <head>
-      <meta charset = "utf-8">
-      <title>Registration</title>
-   </head>
-   <body>
-         <?php
-            echo form_open('Users/register_user');
-            echo form_label('Email');
-            echo form_input(array('id'=>'email','name'=>'email'));
-            echo "<br/>";
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>hi</title>
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/Login-Form-Dark.css">
+   <link rel = "stylesheet" type = "text/css" href = "<?php echo base_url(); ?>assets/css/styles.min.css">
+</head>
 
-            echo form_label('First Name');
-            echo form_input(array('id'=>'first_name','name'=>'first_name'));
-            echo "<br/>";
+<body>
+    <div class="login-dark">
+        <?php echo form_open('User_controller/register_user');?>
+            <h2 class="sr-only">Login Form</h2>
+            <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Email"></div>
+            <div class="form-group"><input class="form-control" name="first_name" placeholder="First name"></div>
+            <div class="form-group"><input class="form-control" name="last_name" placeholder="Last name"></div>
+	    <div class="form-group"><input class="form-control" type="password" name="passwd" placeholder="Password"></div>
+            <div class="form-group"><input class="form-control" name="age" placeholder="Age"></div>
+            <div class="form-group"><input class="form-control" name="gender" placeholder="Gender"></div>
+            <div class="form-group"><input class="form-control" name="occupation" placeholder="Occupation"></div>
+            <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Register</button></div>
+        </form>
+    </div>
+    <script src="<?php echo base_url(); ?>assets/js/jquery.min.js"></script>
+    <script src="<?php echo base_url(); ?>assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
 
-            echo form_label('Last Name');
-            echo form_input(array('id'=>'last_name','name'=>'last_name'));
-            echo "<br/>";
-
-            echo form_label('Password');
-            echo form_input(array('id'=>'passwd','name'=>'passwd'));
-            echo "<br/>";
-
-            echo form_label('Age');
-            echo form_input(array('id'=>'age','name'=>'age'));
-            echo "<br/>";
-
-            echo form_label('Gender');
-            echo form_input(array('id'=>'gender','name'=>'gender'));
-            echo "<br/>";
-
-            echo form_label('Occupation');
-            echo form_input(array('id'=>'occupation','name'=>'occupation'));
-            echo "<br/>";
-
-            echo form_submit(array('id'=>'submit','value'=>'Add'));
-            echo form_close();
-         ?>
-   </body>
 </html>
