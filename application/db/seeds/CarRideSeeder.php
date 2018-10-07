@@ -48,7 +48,7 @@ class CarRideSeeder extends AbstractSeed
             // pre-generate timestamp
             $timestamp = $faker
                          ->unique()
-                         ->dateTimeInInterval($startDate = 'now', $interval = '+ 30 days', $timezone = null)
+                         ->dateTimeInInterval($startDate = 'now', $interval = '+ 30 days', $timezone = 'Singapore')
                          ->format('Y-m-d H:i:s');
 
             $data[] = [
@@ -56,7 +56,7 @@ class CarRideSeeder extends AbstractSeed
                 'start_time'    => $timestamp,
                 'origin'        => $origin,
                 'destination'   => $destination,
-                'price'         => $faker->randomFloat($nbMaxDecimals = 2, $min = 0, $max = 1000),
+                'price'         => $faker->randomFloat($nbMaxDecimals = 2, $min = 0, $max = 30),
                 'vacancy'       => $vacancy,
             ];
         }
