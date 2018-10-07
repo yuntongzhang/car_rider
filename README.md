@@ -13,3 +13,5 @@ _CS2102 (Database Systems) Project_
 - Run migration with `vendor/bin/phinx migrate -e development`
 
 - Seed the database with `vendor/bin/phinx seed:run`
+
+- (Optional) Configure your `base_url` if you are using bitnami
