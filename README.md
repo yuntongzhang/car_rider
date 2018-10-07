@@ -6,6 +6,8 @@ _CS2102 (Database Systems) Project_
 
 - clone this repo
 
+- install redis with `sudo apt install redis-server` and `sudo apt install php-redis`
+
 - run `composer install` to install the dependencies
 
 - change the database configuration in `phinx.yml` and `application/config/database.php`

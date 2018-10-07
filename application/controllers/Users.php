@@ -4,8 +4,7 @@ class Users extends CI_Controller {
 	function __construct() {
 		parent::__construct();
 		$this->load->helper('url');
-		$this->load->library('session');
-		$this->load->database();
+		$this->load->model('Users_model');
 	}
 
 	public function index() {
@@ -18,7 +17,6 @@ class Users extends CI_Controller {
 	}
 
 	public function verify_user() {
-		$this->load->model('Users_model');
 		$result = $this->Users_model->verify();
 		// Now we verify the result
 		if(!$result){
@@ -29,6 +27,8 @@ class Users extends CI_Controller {
 			// If user did validate,
 			// Send them to members area
 			echo $this->session->userdata('email');
+			// temp load this action to test whether session works
+			redirect('/car_rides/own/');
 		}
 	}
 	//register
@@ -38,8 +38,6 @@ class Users extends CI_Controller {
 	}
 
 	public function register_user() {
-		$this->load->model('Users_model');
-
 		$data = array(
 				'email' => $this->input->post('email'),
 				'passwd' => $this->input->post('passwd'),
