@@ -59,7 +59,7 @@ class CreateTables extends AbstractMigration
             start_time TIMESTAMP NOT NULL CHECK (start_time >= NOW()::timestamp),
             origin VARCHAR(32) NOT NULL,
             destination VARCHAR(32) NOT NULL,
-            price MONEY NOT NULL,
+            price NUMERIC(15,2) NOT NULL,
             vacancy INTEGER NOT NULL CHECK (vacancy >= 0),
             PRIMARY KEY (plate_number, start_time)
         )');
