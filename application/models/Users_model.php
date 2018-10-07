@@ -1,20 +1,19 @@
 <?php
 class Users_model extends CI_Model {
 
-	function __construct() {
+	public function __construct() {
 		parent::__construct();
+		$this->load->database();
 	}
 	//login
 	public function verify() {
 		$email = $this->security->xss_clean($this->input->post('email'));
 		$passwd = $this->security->xss_clean($this->input->post('passwd'));
 
-		// Prep the query
-		$this->db->where('email', $email);
-		$this->db->where('passwd', $passwd);
-
-		// Run the query
-		$query = $this->db->get('users');
+		$query = $this->db->query("SELECT *
+								   FROM users
+								   WHERE email = '$email'
+								   AND passwd = '$passwd'");
 
 		if($query->num_rows() == 1)
 		{
