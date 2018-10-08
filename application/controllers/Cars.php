@@ -8,10 +8,12 @@ class Cars extends CI_Controller {
             parent::__construct();
             $this->load->model('Cars_model');
             $this->load->helper('url_helper');
+            $this->load->library('session');
     }
 
-	public function index($user_email='123@gmail.com')
-	{
+	public function index()
+	{   
+            $user_email = $this->session->userdata('email');
             $data['cars'] = $this->Cars_model->get_cars($user_email);
 
             //$this->load->view('templates/header');
