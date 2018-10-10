@@ -2,6 +2,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Bootstrap CSS -->
+    <link href="<?php echo base_url(); ?>assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap JS -->
+    <script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
+    
     <title>Car Rider</title>
     <style>
     /* Style the body */
