@@ -17,9 +17,9 @@ environments:
     development:
         adapter: pgsql
         host: localhost
-        name: car_rider
-        user: yuntong
-        pass: yuntong
+        name: car_bidding
+        user: postgres
+        pass: Greyele1!2
         port: 5432
         charset: utf8
 

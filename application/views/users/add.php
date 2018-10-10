@@ -6,12 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>hi</title>
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/bootstrap/css/bootstrap.min.css">
+<<<<<<< Updated upstream
     <link rel = "stylesheet" type = "text/css" href = "<?php echo base_url(); ?>assets/css/styles.min.css">
+=======
+   <link rel = "stylesheet" type = "text/css" href = "<?php echo base_url(); ?>assets/css/styles.min.css">
+>>>>>>> Stashed changes
 </head>
 
 <body>
     <div class="login-dark">
+<<<<<<< Updated upstream
         <?php echo form_open('users/register_user');?>
+=======
+        <?php echo form_open('Users/register_user');?>
+>>>>>>> Stashed changes
             <h2 class="sr-only">Login Form</h2>
             <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Email"></div>
             <div class="form-group"><input class="form-control" name="first_name" placeholder="First name"></div>

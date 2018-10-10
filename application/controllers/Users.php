@@ -13,7 +13,7 @@ class Users extends CI_Controller {
 	//login
 	public function login_view() {
 		$this->load->helper('form');
-        $this->load->view('users/login');
+        	$this->load->view('users/login');
 	}
 
 	public function verify_user() {
