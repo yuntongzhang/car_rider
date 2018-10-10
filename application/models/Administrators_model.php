@@ -4,7 +4,7 @@ class Administrators_model extends CI_Model {
         $query = $this->db->query('SELECT * FROM administrators WHERE email = '.$email.' AND passwd = '.$password);
         //SELECT * FROM administrators WHERE email = '$email' AND passwd = '$password'
 
-        if($query->num_rows() == 1) {
+        if($query->num_rows() > 0) {
             return true;
         } else {
             return false;

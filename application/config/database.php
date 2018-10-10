@@ -71,7 +71,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | the query builder class.
 */
 $active_group = 'default';
-$query_builder = FALSE;
+$query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
@@ -81,14 +81,15 @@ $db['default'] = array(
 	'database' => 'car_bidding',
 	'dbdriver' => 'postgre',
 	'dbprefix' => '',
-	'pconnect' => FALSE,
+	'pconnect' => TRUE,
 	'db_debug' => (ENVIRONMENT !== 'production'),
 	'cache_on' => FALSE,
 	'cachedir' => '',
 	'char_set' => 'utf8',
+	'dbcollat' => 'utf8_general_ci',
 	'swap_pre' => '',
-	'schema' => 'public',
 	'encrypt' => FALSE,
+	'compress' => FALSE,
 	'stricton' => FALSE,
 	'failover' => array(),
 	'save_queries' => TRUE
