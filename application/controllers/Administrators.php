@@ -3,7 +3,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Administrators extends CI_Controller {
     function login() {
         $data['title'] = 'Administrator Login';
-	$this->load->library('form_validation');
+
+        $this->load->library('form_validation');
         $this->load->library('session');
         $this->load->view("administrators/login", $data);
     }

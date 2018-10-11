@@ -4,25 +4,18 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <title>Bootstrap CI integration</title>
 
-    <!-- Bootstrap CSS-->
+    <title>Bootstrap CI integration</title>
+     <!-- Bootstrap CSS-->
     <link href="<?php echo asset_url(); ?>assets/css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="<?php echo asset_url(); ?>assets/css/bootstrap-theme.css" rel="stylesheet">
     <link href="<?php echo asset_url(); ?>assets/css/bootstrap.min.css" rel="stylesheet">
-    
-    
 
-  </head>
+
+   </head>
   <body>
-
-  <button class="btn btn-primary" onclick="window.location.href='<?php echo base_url(); ?>Cars/index/'">Back</button>
-
-
-
-
-  <table class="table table-striped">
+   <button class="btn btn-primary" onclick="window.location.href='<?php echo base_url(); ?>Cars/index/'">Back</button>
+   <table class="table table-striped">
   <thead>
     <tr>
       <th scope="col">plate_number</th>
@@ -31,8 +24,7 @@
       <th scope="col">destination</th>
       <th scope="col">price</th>
       <th scope="col">vacancy</th>
-
-    </tr>
+     </tr>
   </thead>
   <tbody>
   <div class="car_rides">
@@ -51,11 +43,9 @@
 </div>
   </tbody>
 </table>
-
-    <!-- jQuery-->
+     <!-- jQuery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
-    <!-- Bootstrap JS-->
+     <!-- Bootstrap JS-->
     <script src="<?php echo asset_url(); ?>assets/js/bootstrap.min.js"></script>
   </body>
 </html>
