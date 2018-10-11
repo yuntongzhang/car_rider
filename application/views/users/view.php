@@ -37,7 +37,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 order-lg-2">
-                    <div class="p-5"><img class="rounded-circle img-fluid" src="<?php echo asset_url(); ?>assets/img/car1.jpg"></div>
+                    <div class="p-5"><img class="rounded-circle img-fluid" src="<?php echo asset_url(); ?>assets/img/car/car1.jpg"></div>
                 </div>
                 <div class="col-lg-6 order-lg-1">
                     <div class="p-5">
@@ -52,7 +52,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 order-lg-1">
-                    <div class="p-5"><img class="rounded-circle img-fluid" src="<?php echo asset_url(); ?>assets/img/car2.png"></div>
+                    <div class="p-5"><img class="rounded-circle img-fluid" src="<?php echo asset_url(); ?>assets/img/car/car2.png"></div>
                 </div>
                 <div class="col-lg-6 order-lg-2">
                     <div class="p-5">
@@ -67,7 +67,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 order-lg-2">
-                    <div class="p-5"><img class="rounded-circle img-fluid" src="<?php echo asset_url(); ?>assets/img/car3.jpg"></div>
+                    <div class="p-5"><img class="rounded-circle img-fluid" src="<?php echo asset_url(); ?>assets/img/car/car3.jpg"></div>
                 </div>
                 <div class="col-lg-6 order-lg-1">
                     <div class="p-5">
