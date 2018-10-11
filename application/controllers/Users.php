@@ -28,7 +28,7 @@ class Users extends CI_Controller {
 			// Send them to members area
 			echo $this->session->userdata('email');
 			// temp load this action to test whether session works
-			redirect('/car_rides/own/');
+			redirect('/car_rides/new/');
 		}
 	}
 	//register
