@@ -4,9 +4,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link href="<?php echo base_url(); ?>assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo asset_url(); ?>assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap JS -->
-    <script src="<?php echo base_url(); ?>assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="<?php echo asset_url(); ?>assets/bootstrap/js/bootstrap.min.js"></script>
 
     <title>Car Rider</title>
     <style>

@@ -3,7 +3,6 @@ class Users extends CI_Controller {
 
 	function __construct() {
 		parent::__construct();
-		$this->load->helper('url');
 		$this->load->model('Users_model');
 	}
 
@@ -12,7 +11,6 @@ class Users extends CI_Controller {
 	}
 	//login
 	public function login_view() {
-		$this->load->helper('form');
         $this->load->view('users/login');
 	}
 
@@ -22,18 +20,15 @@ class Users extends CI_Controller {
 		if(!$result){
 			// If user did not validate, then show them login page again
 			//$msg = '<font color=red>Invalid username and/or password.</font><br />';
-			echo 0;
+			$this->load->view('users/login');
 		}else{
-			// If user did validate,
-			// Send them to members area
+			// If user did validate
 			echo $this->session->userdata('email');
-			// temp load this action to test whether session works
-			redirect('/car_rides/new/');
+			redirect('/cars', 'refresh');
 		}
 	}
 	//register
 	public function register_view() {
-		$this->load->helper('form');
 		$this->load->view('users/add');
 	}
 
@@ -49,8 +44,22 @@ class Users extends CI_Controller {
 			     );
 
 		$this->Users_model->insert_user($data);
+		$this->load->view('users/login');
+	}
 
-		//$this->load->view('User_view',$data); //maybe redirect to profile
+	//logout
+	public function logout_user() {
+		//removing session data
+		$this->session->unset_userdata(array(
+					'email',
+					'first_name',
+					'last_name',
+					'gender',
+					'age',
+					'occupation',
+					'validated'
+					));
+		$this->load->view('users/view');
 	}
 
 }
