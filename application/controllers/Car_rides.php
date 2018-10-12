@@ -87,7 +87,19 @@ class Car_rides extends CI_Controller {
 
 
     // passenger bid for a particular car ride
-    public function bid() {
+    public function bid($plate_number, $start_time_slug) {
+        $start_time = str_replace(' ', '_', $start_time_slug);
+
+        $this->car_rides_model->add_bid($plate_number, $start_time);
+        $data['car_rides'] = $this->car_rides_model->get_bid($plate_number, $start_time);
+
+        $this->load->view('templates/header', $data);
+        $this->load->view('car_rides/bid', $data);
+        $this->load->view('templates/footer');
+    }
+
+    // display the rides which the passenger has bid for
+    public function show_bid() {
 
     }
 }

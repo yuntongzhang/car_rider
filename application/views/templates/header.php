@@ -1,79 +1,46 @@
+<!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Home - Brand</title>
     <!-- Bootstrap CSS -->
-    <link href="<?php echo asset_url(); ?>assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="<?php echo asset_url(); ?>assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i">
     <!-- Bootstrap JS -->
     <script src="<?php echo asset_url(); ?>assets/bootstrap/js/bootstrap.min.js"></script>
-
-    <title>Car Rider</title>
-    <style>
-    /* Style the body */
-    body {
-        font-family: Arial;
-        margin: 0;
-    }
-
-    /* Header/Logo Title */
-    .header {
-        padding: 10px;
-        height: 200px;
-        text-align: center;
-        background: #04B4AE;
-        color: white;
-        font-size: 30px;
-    }
-
-    /* Page Content */
-    .content {padding:20px;}
-
-    .topnav {
-        overflow: hidden;
-        background-color: #088A85;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    }
-
-    .topnav a {
-        float: left;
-        color: black;
-        text-align: center;
-        width: 25%;
-        padding-top: 14px;
-        padding-bottom: 14px;
-        text-decoration: none;
-        font-size: 17px;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    }
-
-    .topnav a:hover {
-        background-color: silver;
-        color: black;
-    }
-
-    .footer {
-        position: relative;
-        text-align: center;
-        padding: 3px;
-        background: silver;
-    }
-
-</style>
 </head>
+
 <body>
-    <div class="header">
-        <h1>Car Rider</h1>
-        <p><?php echo $title; ?></p>
-    </div>
+    <nav class="navbar navbar-dark navbar-expand-lg bg-dark navbar-custom">
+        <div class="container">
+            <a class="navbar-brand" href="<?php echo base_url();?>users/index">CARZBID</a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarResponsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="<?php echo base_url();?>users/register_view">Sign Up</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="<?php echo base_url();?>users/login_view">Log In</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-    <div class="topnav">
-        <!--TODO Change links-->
-        <a href="homepage">Home</a>
-        <a href="carpage">Car</a>
-        <a href="passengerpage">Passenger</a>
-        <a href="driverpage">Driver</a>
-    </div>
-
-
-    <div class="content">
+    <div class="container">
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link" href="<?php echo base_url();?>cars/index">Car</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="<?php echo base_url();?>car_rides/own">Proposed Car Rides</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Booked Car Rides</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="<?php echo base_url();?>car_rides/index">Search for New Car Rides</a>
+            </li>
+        </ul>

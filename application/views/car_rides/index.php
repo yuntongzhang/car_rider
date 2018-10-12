@@ -10,10 +10,15 @@
             <th>Destination</th>
             <th>Price</th>
             <th>Vacancy</th>
+            <th>Bid</th>
         </tr>
     </thead>
     <tbody>
     <?php foreach ($car_rides as $ride): ?>
+        <?php
+            $slug = url_title($ride['start_time'], 'underscore');
+            $bid_url = site_url('car_rides/bid/'.$ride['plate_number'].'/'.$slug);
+        ?>
         <?php echo "<tr>
             <td>" . $ride['plate_number'] . "</td>
             <td>" . $ride['start_time'] . "</td>
@@ -28,4 +33,3 @@
     </tbody>
 </table>
 </div>
-

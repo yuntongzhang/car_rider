@@ -5,14 +5,21 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Home - Brand</title>
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="<?php echo asset_url(); ?>assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i">
+    <!-- Bootstrap JS -->
+    <script src="<?php echo asset_url(); ?>assets/bootstrap/js/bootstrap.min.js"></script>
 </head>
 
 <body>
-    <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark navbar-custom">
-        <div class="container"><a class="navbar-brand" href="#">CARZBID</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navbarResponsive"><span class="navbar-toggler-icon"></span></button>
+    <nav class="navbar navbar-dark navbar-expand-lg bg-dark navbar-custom">
+        <div class="container">
+            <a class="navbar-brand" href="<?php echo base_url();?>users/index">CARZBID</a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarResponsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="nav navbar-nav ml-auto">
                     <li class="nav-item" role="presentation"><a class="nav-link" href="<?php echo base_url();?>users/register_view">Sign Up</a></li>
@@ -21,7 +28,7 @@
             </div>
         </div>
     </nav>
-    <header class="masthead text-center text-white">
+    <header class="masthead text-center">
         <div class="masthead-content">
             <div class="container">
                 <h1 class="masthead-heading mb-0">We Are Here</h1>
@@ -78,10 +85,8 @@
             </div>
         </div>
     </section>
-    <footer class="py-5 bg-black">
-        <div class="container">
-            <p class="text-center text-white m-0 small">Copyright&nbsp;© CARZBID 2018</p>
-        </div>
+    <footer class="container py-5">
+        <p class="text-center m-0 small">Copyright&nbsp;© CARZBID 2018</p>
     </footer>
     <script src="<?php echo asset_url(); ?>assets/js/jquery.min.js"></script>
     <script src="<?php echo asset_url(); ?>assets/bootstrap/js/bootstrap.min.js"></script>
