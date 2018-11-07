@@ -25,7 +25,7 @@ class UserSeeder extends AbstractSeed
         };
 
         $data = [];
-        for ($i = 0; $i < 100; $i++) {
+        for ($i = 0; $i < 20; $i++) {
             $data[] = [
                 'email'         => $faker->unique()->email,
                 'passwd'        => $faker->valid($lengthBoundValidator)->password,

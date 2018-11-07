@@ -116,14 +116,12 @@ class Car_rides_model extends CI_Model {
     }
 
     // search for all the car rides bidded
-    public function get_bid($plate_number, $start_time) {
+    public function get_bid() {
         $passenger_email = $this->session->userdata('email');
         $data = array($passenger_email);
         $sql = "SELECT r.*
                 FROM car_rides r, bids b
-                WHERE r.plate_number = b.plate_number
-                AND r.start_time = b.start_time
-                AND b.passenger_email = ?";
+                WHERE b.passenger_email = ?";
 
         $query = $this->db->query($sql, $data);
         return $query->result_array();

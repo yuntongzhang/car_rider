@@ -33,7 +33,7 @@ class CarSeeder extends AbstractSeed
         };
 
         $data = [];
-        for ($i = 0; $i < 200; $i++) {
+        for ($i = 0; $i < 50; $i++) {
             $data[] = [
                 'plate_number'  => $faker->unique()->vehicleRegistration('[A-Z]{2}[0-9]{5}[A-Z]{1}'),
                 'driver_email'  => $faker->randomElement($user_emails),

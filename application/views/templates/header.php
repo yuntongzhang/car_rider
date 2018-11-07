@@ -38,7 +38,7 @@
                 <a class="nav-link" href="<?php echo base_url();?>car_rides/own">Proposed Car Rides</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Booked Car Rides</a>
+                <a class="nav-link" href="<?php echo base_url();?>car_rides/show_bid">Booked Car Rides</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="<?php echo base_url();?>car_rides/index">Search for New Car Rides</a>

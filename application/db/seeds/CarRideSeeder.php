@@ -32,7 +32,7 @@ class CarRideSeeder extends AbstractSeed
         };
 
         $data = [];
-        for ($i = 0; $i < 500; $i++) {
+        for ($i = 0; $i < 100; $i++) {
             // make sure origin and destination are different
             $origin = $faker->valid($lengthUpperValidator)->streetAddress;
             $destination = $faker->valid($lengthUpperValidator)->streetAddress;
@@ -56,7 +56,7 @@ class CarRideSeeder extends AbstractSeed
                 'start_time'    => $timestamp,
                 'origin'        => $origin,
                 'destination'   => $destination,
-                'price'         => $faker->randomFloat($nbMaxDecimals = 2, $min = 0, $max = 30),
+                'price'         => $faker->randomFloat($nbMaxDecimals = 2, $min = 0, $max = 5),
                 'vacancy'       => $vacancy,
             ];
         }
