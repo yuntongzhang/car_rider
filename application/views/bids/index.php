@@ -8,11 +8,13 @@
             <th>Destination</th>
             <th>Price</th>
             <th>Vacancy</th>
-            <th>Actions</th>
+            <th>My Price</th>
+            <th>Status</th>
         </tr>
     </thead>
     <tbody>
-    <?php foreach ($car_rides as $ride): ?>
+    <?php foreach ($car_ride_bids as $ride): ?>
+        <?php $status = $ride['accepted'] ? "Pending" : "Confirmed"; ?>
         <?php echo "<tr>
             <td>" . $ride['plate_number'] . "</td>
             <td>" . $ride['start_time'] . "</td>
@@ -20,6 +22,8 @@
             <td>" . $ride['destination'] . "</td>
             <td>" . $ride['price'] . "</td>
             <td>" . $ride['vacancy'] . "</td>
+            <td>" . $ride['my_price'] . "</td>
+            <td>" . $status . "</td>
         </tr>"; ?>
     <?php endforeach; ?>
     </tbody>

@@ -8,15 +8,14 @@
             <th>Destination</th>
             <th>Price</th>
             <th>Vacancy</th>
-            <th>Actions</th>
+            <th>View details</th>
         </tr>
     </thead>
     <tbody>
     <?php foreach ($car_rides as $ride): ?>
         <?php
             $slug = url_title($ride['start_time'], 'underscore');
-            $edit_url = site_url('car_rides/edit/'.$ride['plate_number'].'/'.$slug);
-            $delete_url = site_url('car_rides/delete/'.$ride['plate_number'].'/'.$slug);
+            $show_url = site_url('car_rides/show/'.$ride['plate_number'].'/'.$slug);
         ?>
         <?php echo "<tr>
             <td>" . $ride['plate_number'] . "</td>
@@ -25,10 +24,8 @@
             <td>" . $ride['destination'] . "</td>
             <td>" . $ride['price'] . "</td>
             <td>" . $ride['vacancy'] . "</td>
-            <td><a class='btn btn-warning' href=" . $edit_url .
-                "><span class='glyphicon glyphicon-pencil'></span>
-                </a><a class='btn btn-danger' href=" . $delete_url .
-                "><span class='glyphicon glyphicon-trash'></span>
+            <td><a class='btn btn-warning' href=" . $show_url .
+                ">View Details
                 </a>
             </td>
         </tr>"; ?>

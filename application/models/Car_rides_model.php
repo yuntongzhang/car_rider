@@ -104,24 +104,13 @@ class Car_rides_model extends CI_Model {
         return $query->row_array();
     }
 
-    // add a bid to database
-    public function add_bid($plate_number, $start_time) {
-        $passenger_email = $this->session->userdata('email');
-        $data = array($passenger_email, $plate_number, $start_time);
-        $sql = "INSERT INTO bids
-                VALUES (?, ?, ?)";
-
-        // return true if insert correctly
-        return $this->db->query($sql, $data);
-    }
-
-    // search for all the car rides bidded
-    public function get_bid() {
-        $passenger_email = $this->session->userdata('email');
-        $data = array($passenger_email);
-        $sql = "SELECT r.*
-                FROM car_rides r, bids b
-                WHERE b.passenger_email = ?";
+    public function find_associated_bids($plate_number, $start_time, $status) {
+        $data = array($plate_number, $start_time, $status);
+        $sql = "SELECT *
+                FROM bids
+                WHERE plate_number = ?
+                AND start_time = ?
+                AND accepted = ?";
 
         $query = $this->db->query($sql, $data);
         return $query->result_array();
