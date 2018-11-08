@@ -26,7 +26,26 @@
 <br></br>
 
 <h3> Meta data of this ride </h3>
-
+<table class="table table-hover table-bordered">
+    <thead>
+        <tr>
+            <th style="width: 25%">Minimum Bid</th>
+            <th style="width: 25%">Maximum Bid</th>
+            <th style="width: 25%">Average Bid</th>
+	    <th style="width: 25%">Total Sum</th>
+        </tr>
+    </thead>
+    <tbody>
+    <?php foreach ($meta_data as $part_data): ?>
+        <?php echo "<tr>
+            <td>" . $part_data['minimum'] . "</td>
+            <td>" . $part_data['maximum'] . "</td>
+            <td>" . $part_data['average'] . "</td>
+	    <td>" . $part_data['total'] . "</td>
+        </tr>"; ?>
+    <?php endforeach; ?>
+    </tbody>
+</table>
 <br></br>
 
 <h3> Accpeted Bids for this ride </h3>

@@ -35,14 +35,14 @@
             <div class="col-10 col-sm-8 col-md-6 col-lg-6 offset-1 offset-sm-2 offset-md-3 offset-lg-0 align-self-center d-lg-flex align-items-lg-center align-self-lg-stretch bg-white p-5 rounded rounded-lg-0 my-5 my-lg-0" id="login-block">
                 <div class="m-auto w-lg-75 w-xl-50">
                     <h2 class="text-info font-weight-light mb-5">&nbsp;CARZBID</h2>
-                    <form>
+                    <?php echo form_open('Users/register_user');?>
                         <div class="form-group"><label class="text-secondary">Email</label><input class="form-control" name="email" type="text" required="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,15}$" inputmode="email"></div>
-                        <div class="form-group"><label class="text-secondary">First Name</label><input class="form-control" name="first_name" type="text" required="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,15}$" inputmode="email"></div>
-                        <div class="form-group"><label class="text-secondary">Last Name</label><input class="form-control" name="last_name" type="text" required="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,15}$" inputmode="email"></div>
+                        <div class="form-group"><label class="text-secondary">First Name</label><input class="form-control" name="first_name" type="text" required="" pattern="[a-z]*"></div>
+                        <div class="form-group"><label class="text-secondary">Last Name</label><input class="form-control" name="last_name" type="text" required="" pattern="[a-z]*"></div>
                         <div class="form-group"><label class="text-secondary">Password</label><input class="form-control" name="passwd" type="password" required=""></div>
-                        <div class="form-group"><label class="text-secondary">Age</label><input class="form-control" name="age" type="text" required="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,15}$" inputmode="email"></div>
-                        <div class="form-group"><label class="text-secondary">Gender</label><input class="form-control" name="gender" type="text" required="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,15}$" inputmode="email"></div>
-                        <div class="form-group"><label class="text-secondary">Occupation</label><input class="form-control" name="occupation" type="text" required="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,15}$" inputmode="email"></div><button class="btn btn-info mt-2" type="submit">SIGN UP</button></form>
+                        <div class="form-group"><label class="text-secondary">Age</label><input class="form-control" name="age" type="text" required="" pattern="[0-9]*"></div>
+                        <div class="form-group"><label class="text-secondary">Gender</label><input class="form-control" name="gender" type="text" required="" pattern="[mfMF]{1}$" placeholder="F for Female, M for Male"></div>
+                        <div class="form-group"><label class="text-secondary">Occupation</label><input class="form-control" name="occupation" type="text" required="" pattern="[a-z]*" ></div><button class="btn btn-info mt-2" type="submit">SIGN UP</button></form>
                     <p
                         class="mt-3 mb-0"></p>
                 </div>

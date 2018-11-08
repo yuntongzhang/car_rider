@@ -1,19 +1,20 @@
 <?php
 class Users_model extends CI_Model {
 
-	public function __construct() {
+	function __construct() {
 		parent::__construct();
-		$this->load->database();
 	}
 	//login
 	public function verify() {
 		$email = $this->security->xss_clean($this->input->post('email'));
 		$passwd = $this->security->xss_clean($this->input->post('passwd'));
 
-		$query = $this->db->query("SELECT *
-								   FROM users
-								   WHERE email = '$email'
-								   AND passwd = '$passwd'");
+		// Prep the query
+		$this->db->where('email', $email);
+		$this->db->where('passwd', $passwd);
+
+		// Run the query
+		$query = $this->db->get('users');
 
 		if($query->num_rows() == 1)
 		{
@@ -34,12 +35,18 @@ class Users_model extends CI_Model {
 
 		return false;
 	}
-	//register
+	//register ASK YUNTONG TO ADD
 	public function insert_user($data) {
-		$sql = "INSERT INTO users VALUES(?,?,?,?,?,?,?)";
-		if($this->db->query($sql, $data)){
-			return true;
+		// $query = 0;
+		$check_sql = "SELECT * FROM USERS WHERE EMAIL = ?";
+		$query = $this->db->query($check_sql, $data['email']);
+		if($query->num_rows() <= 0){
+			$sql = "INSERT INTO users VALUES(?,?,?,?,?,?,?)";
+			if($this->db->query($sql, $data)){
+				return true;
+			}
 		}
+		return false;
 	}
 }
 ?>
