@@ -86,8 +86,16 @@ class Car_rides extends CI_Controller {
 
     // show the details of one car ride
     // this function is for passengers to inspect the details of the ride, enter a bid, or update a bid
-    public function show_for_passenger($plate_number, $start_time_slug) {
+    public function passenger_show($plate_number, $start_time_slug) {
+        $start_time = str_replace(' ', '_', $start_time_slug);
+        $data['ride'] = $this->car_rides_model->search_car_ride($plate_number, $start_time);
+        $data['pending_bids'] = $this->car_rides_model->find_associated_bids($plate_number, $start_time, false);
+        $data['accepted_bids'] = $this->car_rides_model->find_associated_bids($plate_number, $start_time, true);
+        $data['title'] = "Details of car ride";
 
+        $this->load->view('templates/header', $data);
+        $this->load->view('car_rides/passenger_show', $data);
+        $this->load->view('templates/footer');
     }
 
     // list all car rides not proposed by current user

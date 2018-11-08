@@ -10,14 +10,15 @@
             <th>Destination</th>
             <th>Price</th>
             <th>Vacancy</th>
-            <th>Bid</th>
+            <th>Details</th>
         </tr>
     </thead>
     <tbody>
     <?php foreach ($car_rides as $ride): ?>
         <?php
-            $slug = url_title($ride['start_time'], 'underscore');
-            $bid_url = site_url('car_rides/bid/'.$ride['plate_number'].'/'.$slug);
+            $start_time_slug = url_title($ride['start_time'], 'underscore');
+            $passenger_show_url = site_url('car_rides/passenger_show/'.$ride['plate_number'].'/'.$start_time_slug);
+            $bid_url = site_url('car_rides/bid/'.$ride['plate_number'].'/'.$start_time_slug);
         ?>
         <?php echo "<tr>
             <td>" . $ride['plate_number'] . "</td>
@@ -26,8 +27,8 @@
             <td>" . $ride['destination'] . "</td>
             <td>" . $ride['price'] . "</td>
             <td>" . $ride['vacancy'] . "</td>
-            <td><a class='btn btn-primary' href=" . $bid_url .
-            ">Bid</a></td>
+            <td><a class='btn btn-info' href=" . $passenger_show_url .
+            ">View Details</a></td>
         </tr>"; ?>
     <?php endforeach; ?>
     </tbody>

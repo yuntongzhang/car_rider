@@ -25,6 +25,10 @@
 
 <br></br>
 
+<h3> Meta data of this ride </h3>
+
+<br></br>
+
 <h3> Accpeted Bids for this ride </h3>
 <table class="table table-hover table-bordered">
     <thead>

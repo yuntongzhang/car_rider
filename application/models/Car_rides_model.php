@@ -4,7 +4,6 @@ class Car_rides_model extends CI_Model {
     public function __construct() {
         parent::__construct();
         $this->load->database();
-
     }
 
     // get the car rides proposed by the current user
