@@ -10,8 +10,9 @@ class Users_model extends CI_Model {
 		$passwd = $this->security->xss_clean($this->input->post('passwd'));
 
 		// Prep the query
-		$this->db->where('email', $email);
-		$this->db->where('passwd', $passwd);
+		$query = $this->db->query("SELECT * FROM users
+						WHERE email = '$email'
+						AND passwd = '$passwd'");
 
 		// Run the query
 		$query = $this->db->get('users');

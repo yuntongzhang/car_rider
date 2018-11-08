@@ -2,10 +2,7 @@
 class Users extends CI_Controller {
 
 	function __construct() {
-		parent::__construct();
-		$this->load->helper('url');
-		$this->load->helper('form');
-		$this->load->library('session');
+		$this->load->model('Users_model');
 		$this->load->database();
 	}
 
@@ -18,7 +15,6 @@ class Users extends CI_Controller {
 	}
 
 	public function verify_user() {
-		$this->load->model('Users_model');
 		$result = $this->Users_model->verify();
 		// Now we verify the result
 		if(!$result){
@@ -38,7 +34,6 @@ class Users extends CI_Controller {
 	}
 
 	public function register_user() {
-		$this->load->model('Users_model');
 		$data = array(
 				'email' => $this->input->post('email'),
 				'passwd' => $this->input->post('passwd'),
