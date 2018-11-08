@@ -1,21 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Bootstrap CI integration</title>
-     <!-- Bootstrap CSS-->
-    <link href="<?php echo asset_url(); ?>assets/css/bootstrap-theme.min.css" rel="stylesheet">
-    <link href="<?php echo asset_url(); ?>assets/css/bootstrap-theme.css" rel="stylesheet">
-    <link href="<?php echo asset_url(); ?>assets/css/bootstrap.min.css" rel="stylesheet">
-
-
-   </head>
-  <body>
-   <button class="btn btn-primary" onclick="window.location.href='<?php echo base_url(); ?>Cars/index/'">Back</button>
-   <table class="table table-striped">
+  <button class="btn btn-primary" onclick="window.location.href='<?php echo base_url(); ?>Cars/index/'">Back</button>
+  <table class="table table-striped table-hover table-bordered">
   <thead>
     <tr>
       <th scope="col">plate_number</th>
@@ -34,18 +19,12 @@
     <th scope="row"><?php echo $ride["plate_number"]; ?></th>
       <td><?php echo $ride["start_time"]; ?></td>
       <td><?php echo $ride["origin"]; ?></td>
-      <td><?php echo $car["destination"]; ?></td>
+      <td><?php echo $ride["destination"]; ?></td>
       <td><?php echo $ride["price"]; ?></td>
-      <td><?php echo $car["vacancy"]; ?></td>
+      <td><?php echo $ride["vacancy"]; ?></td>
     </tr>
   </div>
   <?php } ?>
 </div>
   </tbody>
 </table>
-     <!-- jQuery-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-     <!-- Bootstrap JS-->
-    <script src="<?php echo asset_url(); ?>assets/js/bootstrap.min.js"></script>
-  </body>
-</html>

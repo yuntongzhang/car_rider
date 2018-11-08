@@ -1,7 +1,7 @@
 <div class="container">
 <h3> Detail of this car ride </h3>
-<table class="table table-hover table-bordered">
-    <thead class="thead-dark">
+<table class="table table-striped table-hover table-bordered">
+    <thead>
         <tr>
             <th>Plate Number</th>
             <th>Start Time</th>
@@ -24,7 +24,7 @@
 </table>
 <h3> Accpeted Bids for this ride </h3>
 <table class="table table-hover table-bordered">
-    <thead class="thead-dark">
+    <thead>
         <tr>
             <th>Passenger Email</th>
             <th>His Price</th>
@@ -54,7 +54,7 @@
 
 <h3> Pending bids for this ride </h3>
 <table class="table table-hover table-bordered">
-    <thead class="thead-dark">
+    <thead>
         <tr>
             <th>Passenger Email</th>
             <th>His Price</th>

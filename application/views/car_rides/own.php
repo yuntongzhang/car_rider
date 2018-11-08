@@ -1,6 +1,6 @@
 <div class="container">
-<table class="table table-hover table-bordered">
-    <thead class="thead-dark">
+<table class="table table-striped table-hover table-bordered">
+    <thead>
         <tr>
             <th>Plate Number</th>
             <th>Start Time</th>
