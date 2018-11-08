@@ -70,7 +70,8 @@ class Bids extends CI_Controller {
         $data['pending_bids'] = $this->car_rides_model->find_associated_bids($plate_number, $start_time, false);
         $data['accepted_bids'] = $this->car_rides_model->find_associated_bids($plate_number, $start_time, true);
         $data['title'] = "Details of car ride";
-	$data['meta_data'] = $this->car_rides_model->cal_meta_data($plate_number, $start_time, true);
+        $data['meta_data'] = $this->car_rides_model->cal_meta_data($plate_number, $start_timea);
+
         $this->load->view('templates/header', $data);
         $this->load->view('car_rides/show', $data);
         $this->load->view('templates/footer');
@@ -86,7 +87,8 @@ class Bids extends CI_Controller {
         $data['pending_bids'] = $this->car_rides_model->find_associated_bids($plate_number, $start_time, false);
         $data['accepted_bids'] = $this->car_rides_model->find_associated_bids($plate_number, $start_time, true);
         $data['title'] = "Details of car ride";
-	$data['meta_data'] = $this->car_rides_model->cal_meta_data($plate_number, $start_time, true);
+        $data['meta_data'] = $this->car_rides_model->cal_meta_data($plate_number, $start_time);
+
         $this->load->view('templates/header', $data);
         $this->load->view('car_rides/show', $data);
         $this->load->view('templates/footer');

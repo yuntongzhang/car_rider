@@ -3,6 +3,7 @@ class Users_model extends CI_Model {
 
 	function __construct() {
 		parent::__construct();
+		$this->load->database();
 	}
 	//login
 	public function verify() {
@@ -15,7 +16,6 @@ class Users_model extends CI_Model {
 						AND passwd = '$passwd'");
 
 		// Run the query
-		$query = $this->db->get('users');
 
 		if($query->num_rows() == 1)
 		{

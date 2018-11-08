@@ -3,7 +3,7 @@
 
 use Phinx\Migration\AbstractMigration;
 
-class CreateBidsTrigger extends AbstractMigration
+class CreateNewBidsTrigger extends AbstractMigration
 {
     /**
      * Change Method.
@@ -33,27 +33,27 @@ class CreateBidsTrigger extends AbstractMigration
     public function change()
     {
         $this->execute(
-            "CREATE FUNCTION accept_bid()
+            "CREATE FUNCTION accept_bids()
             RETURNS TRIGGER AS $$
             DECLARE time INTERVAL;
             BEGIN
             time = '1 hour';
-            IF ((NEW.start_time - OLD.start_time) <= time) OR ((OLD.start_time - NEW.start_time) <= time)
-            AND NEW.passenger_email = OLD.passenger_email
-            AND OLD.accepted = TRUE
-            AND NEW.plate_number != OLD.plate_number
+            IF ((NEW.start_time - OLD.start_time) > time) OR ((OLD.start_time - NEW.start_time) > time)
+            AND OLD.accepted = false
             THEN RAISE NOTICE 'You cannot assign two car rides with the same starting time to a passenger.';
-            RETURN NULL;
             ELSE
-            RETURN NEW;
+            RAISE NOTICE 'fuck';
+            RETURN NULL;
             END IF;
+
             END; $$ LANGUAGE PLPGSQL;
 
-            CREATE TRIGGER accept_bid
+            CREATE TRIGGER accept_bids
             BEFORE UPDATE
             ON bids
             FOR EACH ROW
-            EXECUTE PROCEDURE accept_bid();
+            WHEN (NEW.plate_number <> OLD.plate_number OR NEW.start_time <> OLD.start_time OR NEW.passenger_email <> OLD.passenger_email)
+            EXECUTE PROCEDURE accept_bids();
             "
         );
     }

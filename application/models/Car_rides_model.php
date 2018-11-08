@@ -116,13 +116,12 @@ class Car_rides_model extends CI_Model {
         return $query->result_array();
     }
 
-     public function cal_meta_data($plate_number, $start_time, $status) {
-        $data = array($plate_number, $start_time, $status);
+     public function cal_meta_data($plate_number, $start_time) {
+        $data = array($plate_number, $start_time);
         $sql = "SELECT MIN(PRICE) as minimum, MAX(PRICE) as maximum, ROUND(AVG(PRICE),2) as average, SUM(PRICE) as total
                 FROM bids
                 WHERE plate_number = ?
                 AND start_time = ?
-                AND accepted = ?
 		GROUP BY PLATE_NUMBER, START_TIME
 		ORDER BY PLATE_NUMBER, START_TIME";
 

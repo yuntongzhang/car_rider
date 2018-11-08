@@ -48,10 +48,7 @@
                         <a class="nav-link" href="<?php echo base_url();?>car_rides/index">Find New Rides</a>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <a class="nav-link" href="<?php echo base_url();?>users/register_view">Sign Up</a>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <a class="nav-link" href="<?php echo base_url();?>users/login_view">Log In</a>
+                        <a class="nav-link" href="<?php echo base_url();?>users/logout_user">Log Out</a>
                     </li>
                 </ul>
             </div>

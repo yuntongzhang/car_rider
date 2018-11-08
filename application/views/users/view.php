@@ -35,8 +35,12 @@
                 aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
             <div class="collapse navbar-collapse text-right" id="navbarResponsive">
                 <ul class="nav navbar-nav ml-auto text-uppercase">
-                    <li class="nav-item" role="presentation"><a class="nav-link js-scroll-trigger" href="<?php echo base_url();?>users/register_view">Sign up</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link js-scroll-trigger" href="<?php echo base_url();?>users/login_view">log in</a></li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link js-scroll-trigger" href="<?php echo base_url();?>users/register_view">Sign up</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link js-scroll-trigger" href="<?php echo base_url();?>users/login_view">log in</a>
+                    </li>
                 </ul>
             </div>
         </div>
