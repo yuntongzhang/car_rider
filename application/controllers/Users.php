@@ -4,6 +4,7 @@ class Users extends CI_Controller {
 	function __construct() {
 		parent::__construct();
 		$this->load->model('Users_model');
+		$this->load->database();
 	}
 
 	public function index() {
@@ -11,7 +12,7 @@ class Users extends CI_Controller {
 	}
 	//login
 	public function login_view() {
-        $this->load->view('users/login');
+        	$this->load->view('users/login');
 	}
 
 	public function verify_user() {
@@ -20,9 +21,10 @@ class Users extends CI_Controller {
 		if(!$result){
 			// If user did not validate, then show them login page again
 			//$msg = '<font color=red>Invalid username and/or password.</font><br />';
+			//echo 0;
 			$this->load->view('users/login');
 		}else{
-			// If user did validate
+			// If user did validate,
 			echo $this->session->userdata('email');
 			redirect('/cars', 'refresh');
 		}
@@ -43,14 +45,18 @@ class Users extends CI_Controller {
 				'occupation' => $this->input->post('occupation')
 			     );
 
-		$this->Users_model->insert_user($data);
-		$this->load->view('users/login');
+		if($this->Users_model->insert_user($data)){
+			$this->load->view('users/login');
+		}
+		else{
+			echo "<script>alert('This email is already registered!');</script>";
+			$this->load->view('users/add');
+		}
 	}
-
 	//logout
-	public function logout_user() {
-		//removing session data
-		$this->session->unset_userdata(array(
+	public function logout_user() { 		
+		 //removing session data 
+		 $this->session->unset_userdata(array(
 					'email',
 					'first_name',
 					'last_name',
@@ -58,9 +64,9 @@ class Users extends CI_Controller {
 					'age',
 					'occupation',
 					'validated'
-					));
-		$this->load->view('users/view');
-	}
+				     )); 
+		 $this->load->view('users/view'); 
+      } 
 
 }
 ?>
