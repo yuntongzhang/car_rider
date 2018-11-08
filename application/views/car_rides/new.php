@@ -40,7 +40,7 @@
         <div class="form-group row">
             <label for="price" class="col-md-2 col-form-label">Price</label>
             <div class="col-md-6">
-                <input type="number" class="form-control" name="price" id="destination" min="0" max="100" />
+                <input type="number" class="form-control" name="price" id="destination" min="0" max="100" step=".01"/>
             </div>
         </div><br />
 
@@ -53,7 +53,8 @@
 
         <div class="form-group row">
             <div class="col-md-10">
-                <button type="submit" class="btn btn-primary">Create</button>
+                <button type="submit" class="btn btn-success">Create</button>
+                <a class="btn btn-info" href="<?php echo site_url(); ?>car_rides/own">Back to All Rides</a>
             </div>
         </div>
 

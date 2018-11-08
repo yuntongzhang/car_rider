@@ -1,3 +1,5 @@
+<h2><?php echo $title; ?></h2>
+
 <div class="container">
 <table class="table table-striped table-hover table-bordered">
     <thead>
@@ -24,7 +26,7 @@
             <td>" . $ride['destination'] . "</td>
             <td>" . $ride['price'] . "</td>
             <td>" . $ride['vacancy'] . "</td>
-            <td><a class='btn btn-warning' href=" . $show_url .
+            <td><a class='btn btn-info' href=" . $show_url .
                 ">View Details
                 </a>
             </td>
@@ -32,8 +34,5 @@
     <?php endforeach; ?>
     </tbody>
 </table>
-</div>
-
-<div class="container">
-    <?php anchor('car_rides/create', "Propose a new car ride"); ?>
+<a class="btn btn-success" href="<?php echo base_url(); ?>car_rides/new">Propose a new car ride</a>
 </div>

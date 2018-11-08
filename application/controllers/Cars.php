@@ -4,14 +4,12 @@ class Cars extends CI_Controller {
 	public function __construct() {
 		parent::__construct();
 		$this->load->model('Cars_model');
-		$this->load->helper('url_helper');
-		$this->load->library('session');
     }
 
 	public function index() {
 		$user_email = $this->session->userdata('email');
 		$data['cars'] = $this->Cars_model->get_cars($user_email);
-		$data['title'] = 'Your list of cars.';
+		$data['title'] = 'Your list of cars';
 		$this->load->view('templates/header',$data);
 		$this->load->view('cars/index', $data);
 		$this->load->view('templates/footer');
@@ -19,7 +17,7 @@ class Cars extends CI_Controller {
 
 	public function register_view() {
 		$this->load->helper('form');
-		$data['title'] = 'Register your car.';
+		$data['title'] = 'Register your car';
 		$user_email = $this->session->userdata('email');
 		$data['driver_email'] = $user_email;
 		$this->load->view('templates/header',$data);
@@ -78,11 +76,11 @@ class Cars extends CI_Controller {
 		$this->load->view('templates/footer');
     }
 
-	public function car_rides($plate_number) {
+	public function show_car_rides($plate_number) {
 		$data['car_rides'] = $this->Cars_model->get_car_rides($plate_number);
-		$data['title'] = 'Your list of car rides.';
+		$data['title'] = "Rides for Car $plate_number";
 		$this->load->view('templates/header',$data);
-		$this->load->view('cars/car_rides', $data);
+		$this->load->view('cars/show_rides', $data);
 		$this->load->view('templates/footer');
 	}
 }

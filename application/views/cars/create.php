@@ -28,9 +28,10 @@
         </div>
          <div class="form-group row">
             <div class="col-md-10">
-                <button type="submit" class="btn btn-primary">Register</button>
+                <button type="submit" class="btn btn-info">Register</button>
+                <a class="btn btn-success" href="<?php echo base_url(); ?>Cars/index">Back to Car Listing</a>
             </div>
         </div>
     </form>
-     <button type="button" class="btn btn-primary" onclick="window.location.href='<?php echo base_url(); ?>Cars/index'">Cancel</button>
+
 </div>

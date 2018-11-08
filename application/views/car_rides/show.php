@@ -22,13 +22,16 @@
         </tr>"; ?>
     </tbody>
 </table>
+
+<br></br>
+
 <h3> Accpeted Bids for this ride </h3>
 <table class="table table-hover table-bordered">
     <thead>
         <tr>
-            <th>Passenger Email</th>
-            <th>His Price</th>
-            <th>Reject This Bid</th>
+            <th style="width: 50%">Passenger Email</th>
+            <th style="width: 30%">His Price</th>
+            <th style="width: 20%">Reject This Bid</th>
         </tr>
     </thead>
     <tbody>
@@ -50,15 +53,15 @@
     </tbody>
 </table>
 
-
+<br></br>
 
 <h3> Pending bids for this ride </h3>
 <table class="table table-hover table-bordered">
     <thead>
         <tr>
-            <th>Passenger Email</th>
-            <th>His Price</th>
-            <th>Accept This Bid</th>
+            <th style="width: 50%">Passenger Email</th>
+            <th style="width: 30%">His Price</th>
+            <th style="width: 20%">Accept This Bid</th>
         </tr>
     </thead>
     <tbody>
@@ -79,4 +82,19 @@
     <?php endforeach; ?>
     </tbody>
 </table>
+
+<br></br>
+
+<?php $start_time_slug = url_title($ride['start_time'], 'underscore'); ?>
+<?php $edit_url = site_url('car_rides/edit/'.$ride['plate_number'].'/'.$start_time_slug) ?>
+<?php $delete_url = site_url('car_rides/delete/'.$ride['plate_number'].'/'.$start_time_slug) ?>
+<a class="btn btn-warning" href="<?php echo $edit_url; ?>">Update This Ride</a>
+<a class="btn btn-danger" href="<?php echo $delete_url; ?>">Delete This Ride</a>
+
+<br></br>
+
+<?php $rides_url = site_url('Cars/show_car_rides/'.$ride['plate_number'])?>
+<a class="btn btn-info" href="<?php echo $rides_url; ?>">Back to Rides Listing</a>
+<a class="btn btn-success" href="<?php echo base_url(); ?>Cars/index">Back to Car Listing</a>
+
 </div>

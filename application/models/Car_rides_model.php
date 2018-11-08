@@ -14,7 +14,8 @@ class Car_rides_model extends CI_Model {
         $query = $this->db->query("SELECT r.*
                                    FROM car_rides r, cars c
                                    WHERE r.plate_number = c.plate_number
-                                   AND c.driver_email = '$driver_email'");
+                                   AND c.driver_email = '$driver_email'
+                                   ORDER BY r.plate_number, r.start_time");
 
         return $query->result_array();
     }

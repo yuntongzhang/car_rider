@@ -3,7 +3,7 @@
  <div class="container">
      <?php echo form_open('Cars/update_car'); ?>
          <div class="form-group row">
-            <label for="plate_number" class="col-md-2 col-form-label">Enter Your Car's Plate Number for Update</label>
+            <label for="plate_number" class="col-md-2 col-form-label">Plate Number</label>
             <div class="col-md-10">
                 <input type="text" class="form-control" name = "plate_number" id="plate_number" /><br />
             </div>
@@ -28,9 +28,10 @@
         </div>
          <div class="form-group row">
             <div class="col-md-10">
-                <button type="submit" class="btn btn-primary">Update</button>
+                <button type="submit" class="btn btn-info">Update</button>
+                <a class="btn btn-success" href="<?php echo base_url(); ?>Cars/index">Back to Car Listing</a>
             </div>
         </div>
     </form>
-     <button type="button" class="btn btn-primary" onclick="window.location.href='<?php echo base_url(); ?>Cars/index'">Cancel</button>
+
 </div>

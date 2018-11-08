@@ -36,19 +36,16 @@
     <nav class="navbar navbar-dark navbar-expand-lg sticky-top bg-dark" id="mainNav" style="padding: 0;">
         <div class="container"><a class="navbar-brand" href="<?php echo base_url();?>users/index">CARZBID</a><button class="navbar-toggler navbar-toggler-right" data-toggle="collapse" data-target="#navbarResponsive" type="button" data-toogle="collapse" aria-controls="navbarResponsive" aria-expanded="false"
                 aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
-            <div class="collapse navbar-collapse text-right" id="navbarResponsive" style="padding: 0px;padding-bottom: 20px;">
+            <div class="collapse navbar-collapse text-right" id="navbarResponsive" style="padding: 0px;padding-bottom: 0.5%;">
                 <ul class="nav navbar-nav ml-auto">
                     <li class="nav-item" role="presentation">
-                        <a class="nav-link" href="<?php echo base_url();?>cars/index">Car</a>
+                        <a class="nav-link" href="<?php echo base_url();?>cars/index">My Cars</a>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <a class="nav-link" href="<?php echo base_url();?>car_rides/own">Proposed Car Rides</a>
+                        <a class="nav-link" href="<?php echo base_url();?>bids/show_bids">My Bids</a>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <a class="nav-link" href="<?php echo base_url();?>bids/show_bids">My bids</a>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <a class="nav-link" href="<?php echo base_url();?>car_rides/index">Search for New Car Rides</a>
+                        <a class="nav-link" href="<?php echo base_url();?>car_rides/index">Find New Rides</a>
                     </li>
                     <li class="nav-item" role="presentation">
                         <a class="nav-link" href="<?php echo base_url();?>users/register_view">Sign Up</a>
