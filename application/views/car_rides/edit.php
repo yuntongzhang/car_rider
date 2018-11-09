@@ -48,7 +48,7 @@
         <div class="form-group row">
             <label for="vacancy" class="col-md-2 col-form-label">Vacancy</label>
             <div class="col-md-6">
-                <input type="number" class="form-control" name="vacancy" id="vacancy" min="0" max="50"
+                <input type="number" class="form-control" name="vacancy" id="vacancy" min="1" max="50"
                     value="<?php echo $car_ride['vacancy'] ?>"/>
             </div>
         </div><br />
