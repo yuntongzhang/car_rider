@@ -12,8 +12,8 @@ class Users_model extends CI_Model {
 
 		// Prep the query
 		$query = $this->db->query("SELECT * FROM users
-						WHERE email = '$email'
-						AND passwd = '$passwd'");
+								   WHERE email = '$email'
+						           AND passwd = '$passwd'");
 
 		// Run the query
 
