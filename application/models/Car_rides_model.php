@@ -105,8 +105,8 @@ class Car_rides_model extends CI_Model {
                 WHERE plate_number = ?
                 AND start_time = ?";
 
-        // return true if deleted sucessfully
-        return $this->db->query($sql, $data);
+        $this->db->query($sql, $data);
+        return $this->db->affected_rows();
     }
 
     // find the car ride in database give plate number and start time

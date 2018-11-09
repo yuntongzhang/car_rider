@@ -66,8 +66,25 @@ class Car_rides extends CI_Controller {
     // driver delete a proposed car ride
     public function delete($plate_number, $start_time_slug) {
         $start_time = str_replace(' ', '_', $start_time_slug);
-        $this->car_rides_model->delete_car_ride($plate_number, $start_time);
-        redirect('car_rides/own');
+        $affected_rows = $this->car_rides_model->delete_car_ride($plate_number, $start_time);
+
+        // gather data for rendering 'show' in case trigger fails
+        $data['ride'] = $this->car_rides_model->search_car_ride($plate_number, $start_time);
+        $data['pending_bids'] = $this->car_rides_model->find_associated_bids($plate_number, $start_time, false);
+        $data['accepted_bids'] = $this->car_rides_model->find_associated_bids($plate_number, $start_time, true);
+        $data['title'] = "Details of car ride";
+	    $data['meta_data'] = $this->car_rides_model->cal_meta_data($plate_number, $start_time);
+
+        if ($affected_rows == 1) {
+            // successfully deleted
+            redirect('car_rides/own');
+        } else {
+            // fail due to trigger
+            echo "<script>alert('Your ride is happening in less than on day! You are not allowed to delete such a ride.');</script>";
+            $this->load->view('templates/header', $data);
+            $this->load->view('car_rides/show', $data);
+            $this->load->view('templates/footer');
+        }
     }
 
     // show the details of one car ride

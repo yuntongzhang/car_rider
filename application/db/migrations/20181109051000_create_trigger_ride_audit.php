@@ -34,9 +34,9 @@ class CreateTriggerRideAudit extends AbstractMigration
     {
         $this->execute("CREATE TABLE ride_audit(
             stamp		  timestamp NOT NULL,
-            operation         char(1)   NOT NULL,
-            start_time        timestamp without time zone NOT NULL,
-            price	          numeric(15,2)      NOT NULL,
+            operation     char(1)   NOT NULL,
+            start_time    timestamp without time zone NOT NULL,
+            price	      numeric(15,2)      NOT NULL,
             vacancy 	  integer NOT NULL
         );
         --Triger function that does both assertion and audit
