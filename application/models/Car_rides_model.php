@@ -139,8 +139,8 @@ class Car_rides_model extends CI_Model {
                 FROM bids
                 WHERE plate_number = ?
                 AND start_time = ?
-		GROUP BY PLATE_NUMBER, START_TIME
-		ORDER BY PLATE_NUMBER, START_TIME";
+		        GROUP BY PLATE_NUMBER, START_TIME
+		        ORDER BY PLATE_NUMBER, START_TIME";
 
         $query = $this->db->query($sql, $data);
         return $query->result_array();
