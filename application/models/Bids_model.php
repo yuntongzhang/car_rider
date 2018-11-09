@@ -68,7 +68,8 @@ class Bids_model extends CI_Model {
                 FROM car_rides r, bids b
                 WHERE r.plate_number = b.plate_number
                 AND r.start_time = b.start_time
-                AND b.passenger_email = ?";
+                AND b.passenger_email = ?
+                ORDER BY b.start_time";
 
         $query = $this->db->query($sql, $data);
         return $query->result_array();
