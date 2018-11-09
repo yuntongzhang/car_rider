@@ -64,7 +64,7 @@ class Bids extends CI_Controller {
     public function select_bid($plate_number, $start_time_slug, $email_slug) {
         $start_time = str_replace(' ', '_', $start_time_slug);
         $passenger_email = str_replace('-', '@', $email_slug);
-        $this->bids_model->select_bid($passenger_email, $plate_number, $start_time);
+        $affected_rows = $this->bids_model->select_bid($passenger_email, $plate_number, $start_time);
 
         $data['ride'] = $this->car_rides_model->search_car_ride($plate_number, $start_time);
         $data['pending_bids'] = $this->car_rides_model->find_associated_bids($plate_number, $start_time, false);
@@ -72,6 +72,10 @@ class Bids extends CI_Controller {
         $data['title'] = "Details of car ride";
         $data['meta_data'] = $this->car_rides_model->cal_meta_data($plate_number, $start_time);
 
+        if ($affected_rows != 1) {
+            // fail due to trigger
+            echo "<script>alert('No. of accepted bids cannot be more than no. of vacancy!');</script>";
+        }
         $this->load->view('templates/header', $data);
         $this->load->view('car_rides/show', $data);
         $this->load->view('templates/footer');

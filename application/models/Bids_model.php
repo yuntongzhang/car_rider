@@ -84,7 +84,8 @@ class Bids_model extends CI_Model {
                 AND start_time = ?";
 
         // return true if update the bid status correctly
-        return $this->db->query($sql, $data);
+        $this->db->query($sql, $data);
+        return $this->db->affected_rows();
     }
 
     // set a bit from accepted to pending
