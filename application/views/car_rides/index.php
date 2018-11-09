@@ -1,6 +1,11 @@
 <h2><?php echo $title; ?></h2>
 
 <div class="container">
+<a class="btn btn-success" href="<?php echo site_url(); ?>car_rides/index">View all</a>
+<a class="btn btn-warning" href="<?php echo site_url(); ?>car_rides/filtered_index">View those with vacancies</a>
+
+<br></br>
+
 <table class="table table-striped table-hover table-bordered">
     <thead>
         <tr>

@@ -31,6 +31,23 @@ class Car_rides_model extends CI_Model {
         return $query->result_array();
     }
 
+    public function get_with_vacancy() {
+        $driver_email = $this->session->userdata('email');
+
+        $query = $this->db->query("SELECT *
+                                   FROM car_rides r, cars c
+                                   WHERE r.plate_number = c.plate_number
+                                   AND c.driver_email <> '$driver_email'
+                                   AND r.vacancy > ALL (SELECT COUNT(*)
+                                                        FROM bids b
+                                                        WHERE b.accepted = true
+                                                        GROUP BY b.plate_number, b.start_time
+                                                        HAVING b.plate_number = r.plate_number
+                                                        AND b.start_time = r.start_time)
+                                   ORDER BY start_time ASC");
+        return $query->result_array();
+    }
+
     // get all cars belong to the driver
     public function get_cars() {
         $driver_email = $this->session->userdata('email');

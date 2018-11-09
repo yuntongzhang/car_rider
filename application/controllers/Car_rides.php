@@ -107,4 +107,14 @@ class Car_rides extends CI_Controller {
         $this->load->view('car_rides/index', $data);
         $this->load->view('templates/footer');
     }
+
+    // list rides whereby the number of confirmed bids are smaller than the number of vacancy indicated
+    public function filtered_index() {
+        $data['car_rides'] = $this->car_rides_model->get_with_vacancy();
+        $data['title'] = "Car rides to pick";
+
+        $this->load->view('templates/header', $data);
+        $this->load->view('car_rides/index', $data);
+        $this->load->view('templates/footer');
+    }
 }

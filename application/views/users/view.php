@@ -56,22 +56,22 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="text-uppercase section-heading">Services</h2>
-                    <h3 class="text-muted section-subheading">Lorem ipsum dolor sit amet consectetur</h3>
+                    <h2 class="text-uppercase section-heading">CARZBID</h2>
+                    <h3 class="text-muted section-subheading">A fantastic bidding website for you to manage your trips!</h3>
                 </div>
             </div>
             <div class="row text-center">
                 <div class="col-md-4"><span class="fa-stack fa-4x"><i class="fa fa-circle fa-stack-2x text-primary"></i><i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i></span>
-                    <h4 class="section-heading">E-Commerce</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                    <h4 class="section-heading">REASONABLE</h4>
+                    <p class="text-muted">The cost of the trip is always reasonable as passengers can share the trip expense when travelling together.</p>
                 </div>
                 <div class="col-md-4"><span class="fa-stack fa-4x"><i class="fa fa-circle fa-stack-2x text-primary"></i><i class="fa fa-laptop fa-stack-1x fa-inverse"></i></span>
-                    <h4 class="section-heading">Responsive Design</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                    <h4 class="section-heading">CONVENIENT</h4>
+                    <p class="text-muted">The website is designed in a way such that you can easily navigate and manage and bid for your desired car-ride trips in a carefree manner.</p>
                 </div>
                 <div class="col-md-4"><span class="fa-stack fa-4x"><i class="fa fa-circle fa-stack-2x text-primary"></i><i class="fa fa-lock fa-stack-1x fa-inverse"></i></span>
-                    <h4 class="section-heading">Web Security</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                    <h4 class="section-heading">SAFE</h4>
+                    <p class="text-muted">The users' information are protected since different users are required to log in with their own account and password.</p>
                 </div>
             </div>
         </div>
@@ -80,8 +80,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="text-uppercase">About</h2>
-                    <h3 class="text-muted section-subheading">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h2 class="text-uppercase">Timeline</h2>
+                    <h3 class="text-muted section-subheading">Timeline of CARZBID development.</h3>
                 </div>
             </div>
             <div class="row">
@@ -91,11 +91,11 @@
                             <div class="timeline-image"><img class="rounded-circle img-fluid" src="<?php echo asset_url(); ?>assets/img/about/1.jpg"></div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h4>2009-2011</h4>
+                                    <h4>Aug 2018</h4>
                                     <h4 class="subheading">Our Humble Beginnings</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                                    <p class="text-muted">The developers of this project identified the needs of both drivers and passengers and defined the scope and purpose of this project which is to provide a convenient bidding platform for drivers to earn profits and passengers to find a cheap trip alternative. </p>
                                 </div>
                             </div>
                         </li>
@@ -103,11 +103,11 @@
                             <div class="timeline-image"><img class="rounded-circle img-fluid" src="<?php echo asset_url(); ?>assets/img/about/2.jpg"></div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h4>March 2011</h4>
+                                    <h4>Sept 2018</h4>
                                     <h4 class="subheading">An Agency is Born</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                                    <p class="text-muted">The database schema and its related constraints were designed to keep track of the essential information.</p>
                                 </div>
                             </div>
                         </li>
@@ -115,11 +115,11 @@
                             <div class="timeline-image"><img class="rounded-circle img-fluid" src="<?php echo asset_url(); ?>assets/img/about/3.jpg"></div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h4>December 2012</h4>
+                                    <h4>Oct 2018</h4>
                                     <h4 class="subheading">Transition to Full Service</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                                    <p class="text-muted">The web page was designed, implemented and integrated with the database to achieve a working web product for users to bid for their trips.</p>
                                 </div>
                             </div>
                         </li>
@@ -127,11 +127,11 @@
                             <div class="timeline-image"><img class="rounded-circle img-fluid" src="<?php echo asset_url(); ?>assets/img/about/4.jpg"></div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h4>July 2014</h4>
+                                    <h4>Nov 2018</h4>
                                     <h4 class="subheading">Phase Two Expansion</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                                    <p class="text-muted">Additional enhancements such as exception handling and generating meaningful data are added to augment the user-friendliness of the product.</p>
                                 </div>
                             </div>
                         </li>
