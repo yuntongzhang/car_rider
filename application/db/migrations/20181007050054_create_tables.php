@@ -68,6 +68,8 @@ class CreateTables extends AbstractMigration
             passenger_email VARCHAR(32) REFERENCES users(email),
             plate_number VARCHAR(8),
             start_time TIMESTAMP,
+            price NUMERIC(15,2) NOT NULL,
+            accepted BOOLEAN NOT NULL,
             FOREIGN KEY (plate_number, start_time) REFERENCES car_rides(plate_number, start_time),
             PRIMARY KEY (passenger_email, plate_number, start_time)
         )');

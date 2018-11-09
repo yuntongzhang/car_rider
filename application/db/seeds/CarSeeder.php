@@ -38,7 +38,7 @@ class CarSeeder extends AbstractSeed
                 'plate_number'  => $faker->unique()->vehicleRegistration('[A-Z]{2}[0-9]{5}[A-Z]{1}'),
                 'driver_email'  => $faker->randomElement($user_emails),
                 'car_type'      => $faker->valid($lengthUpperValidator)->vehicleType,
-                'size'          => $faker->numberBetween($min = 1, $max = 30),
+                'size'          => $faker->numberBetween($min = 1, $max = 11),
             ];
         }
 
