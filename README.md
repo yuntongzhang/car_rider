@@ -1,5 +1,7 @@
 # Carzbid
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 Carzbid helps commuters to search or advertise car rides.
 
 This is a project for _CS2102 (Database Systems)_ at the [School of Computing](https://www.comp.nus.edu.sg), [National University of Singapore](http://www.nus.edu.sg).
