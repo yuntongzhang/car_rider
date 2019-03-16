@@ -35,7 +35,7 @@ application/config/database.php
 
 - Run migration:
 ```
-vendor/bin/phinx migrate -e development`
+vendor/bin/phinx migrate -e development
 ```
 
 - Seed the database: 
