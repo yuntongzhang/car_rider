@@ -5,7 +5,6 @@ class Bids extends CI_Controller {
         parent::__construct();
         $this->load->model('bids_model');
         $this->load->model('car_rides_model');
-
     }
 
     // passenger bid for a particular car ride

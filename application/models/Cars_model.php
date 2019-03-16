@@ -32,7 +32,6 @@ class Cars_model extends CI_Model {
 
         $query = $this->db->query("SELECT * FROM cars c1 WHERE c1.driver_email = '".$driver_email."';");
         return $query->result_array();
-
     }
 
     public function delete_car($plate_number,$user_email) {

@@ -28,19 +28,8 @@ class Car_rides extends CI_Controller {
 
     // action taken to create a new car ride
     public function create() {
-        // $this->form_validation->set_rules('title', 'Title', 'required');
-        // $this->form_validation->set_rules('text', 'Text', 'required');
-
-        // if ($this->form_validation->run() === FALSE) {
-        //     $this->load->view('templates/header', $data);
-        //     $this->load->view('car_rides/new');
-        //     $this->load->view('templates/footer');
-
-        // } else {
-            $this->car_rides_model->set_car_ride();
-
-            redirect('/car_rides/own/');
-        // }
+        $this->car_rides_model->set_car_ride();
+        redirect('/car_rides/own/');
     }
 
     // render the page to edit a car ride

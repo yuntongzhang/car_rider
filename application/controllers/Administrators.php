@@ -12,13 +12,13 @@ class Administrators extends CI_Controller {
         $this->form_validation->set_rules('email', 'Email', 'required');
         $this->form_validation->set_rules('password', 'Password', 'required');
 
-        if($this->form_validation->run()) {
+        if ($this->form_validation->run()) {
             $email = $this->input->post('email');
             $password = $this->input->post('password');
 
             //Model
             $this->load->model('Administrators_model');
-            if($this->Administrators_model->can_login($email, $password)) {
+            if ($this->Administrators_model->can_login($email, $password)) {
                 $session_data = array('email' => $email);
                 $this->session->set_userdata($session_data);
                 redirect(base_url() . 'Adminstrators/enter');
@@ -32,7 +32,7 @@ class Administrators extends CI_Controller {
     }
 
     function enter() {
-        if($this->session->userdata('email') != '') {
+        if ($this->session->userdata('email') != '') {
             echo '<h2>Welcome - '.$this->session->userdata('email').'</h2>';
             echo '<label><a href="'.base_url().'Administrators/logout">Logout</a></label>';
         } else {
