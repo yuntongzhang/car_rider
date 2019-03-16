@@ -1,19 +1,64 @@
-# Car Rider
+# Carzbid
 
-_CS2102 (Database Systems) Project_
+Carzbid helps commuters to search or advertise car rides.
 
-## Set up
+This is a project for _CS2102 (Database Systems)_ at the [School of Computing](https://www.comp.nus.edu.sg), [National University of Singapore](http://www.nus.edu.sg).
 
-- clone this repo
 
-- install redis with `sudo apt install redis-server` and `sudo apt install php-redis`
+## Getting Started
 
-- run `composer install` to install the dependencies
+These instructions will get you a copy of the project up and running on your local machine for development.
 
-- change the database configuration in `phinx.yml` and `application/config/database.php`
+### Prerequisites
 
-- Run migration with `vendor/bin/phinx migrate -e development`
+You need to have `redis` installed on your computer. Run the following commands to install:
 
-- Seed the database with `vendor/bin/phinx seed:run`
+```
+sudo apt install redis-server php-redis
+```
 
-- (Optional) Configure your `base_url` if you are using bitnami
+### Install Dependencies
+
+```
+composer install
+```
+
+### Initialize Database
+
+- Change database configuration in the following files:
+```
+phinx.yml
+application/config/database.php
+```
+
+- Run migration:
+```
+vendor/bin/phinx migrate -e development`
+```
+
+- Seed the database: 
+```
+vendor/bin/phinx seed:run
+```
+
+### Optional
+
+If you are using `bitnami`, configure `base_url`.
+
+
+## Built With
+
+- [CodeIgniter](https://codeigniter.com/) - The web framework used
+- [Bootstrap 4](https://getbootstrap.com/docs/4.3/getting-started/introduction/) - The front-end framework used
+- [Phinx](https://phinx.org/) - Database migrations
+- [Faker](https://github.com/fzaninotto/Faker) - Sample data generation
+
+
+## Authors
+
+See the list of [contributors](https://github.com/yuntongzhang/carzbid/graphs/contributors) who participated in this project.
+
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
